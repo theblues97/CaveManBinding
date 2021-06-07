@@ -12,12 +12,11 @@ namespace CaveManBinding.ViewModel
 {
     class frmMainVM: INotifyPropertyChanged
     {
-        private IQueryable<KojModel> _kojData;       
+        private List<KojModel> _kojData;       
 
         private string _kojCode;
         private string _kojName;
         private string _kojRyaku;
-        private List<KojModel> _grdKojData;
 
         #region Properties
         public string KojCode
@@ -50,8 +49,8 @@ namespace CaveManBinding.ViewModel
         }
         public List<KojModel> grdKojData
         {
-            get { return _grdKojData; }
-            set { _grdKojData = value; }
+            get { return _kojData; }
+            set { _kojData = value; }
         }
         public List<string> cbbKojCode
         {
@@ -63,9 +62,7 @@ namespace CaveManBinding.ViewModel
         {
             using (var ctx = new MyContext())
             {
-                _kojData = ctx.KOJ.Select(k => k);
-
-                _grdKojData = _kojData.ToList();
+                _kojData = ctx.KOJ.Select(k => k).ToList();
             }
         }
         public void KojCodeChanged()
