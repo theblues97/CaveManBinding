@@ -14,6 +14,7 @@ namespace CaveManBinding.DbConnection
         }
 
         public virtual DbSet<KojModel> KOJ { get; set; }
+        public virtual DbSet<YosanKsyModel> YOSAN_KSY { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -23,6 +24,9 @@ namespace CaveManBinding.DbConnection
             modelBuilder.Entity<KojModel>()
                 .Property(e => e.KEIY_KIN)
                 .HasPrecision(15, 0);
+
+            modelBuilder.Entity<YosanKsyModel>()
+                .ToTable("T_GB_YOSAN_KSY");
         }
     }
 }
