@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaveManBinding", "CaveManBinding\CaveManBinding.csproj", "{3B9D45F6-DECE-488A-8561-125A2BA6A5C2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InitData", "InitData", "{9F624417-FE83-4078-99A1-86F712A38416}"
+	ProjectSection(SolutionItems) = preProject
+		datainit.sql = datainit.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
