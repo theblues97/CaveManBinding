@@ -31,11 +31,6 @@ namespace CaveManBinding.ViewModel
         public TreeNode PlantingTree()
         {
             var node = new TreeNode();
-            var node0 = new TreeNode();
-            var node1 = new TreeNode();
-            var node2 = new TreeNode();
-            var node3 = new TreeNode();
-            var node4 = new TreeNode();
 
             //foreach (var yosan in _bmnData)
             //{
