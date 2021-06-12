@@ -31,8 +31,6 @@ namespace CaveManBinding
         {
             this.cbbKojCode = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtRyaku = new System.Windows.Forms.TextBox();
             this.dgvKojData = new System.Windows.Forms.DataGridView();
@@ -57,22 +55,6 @@ namespace CaveManBinding
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Code";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(237, 48);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(257, 20);
-            this.txtName.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(196, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Name";
             // 
             // label3
             // 
@@ -106,8 +88,6 @@ namespace CaveManBinding
             this.Controls.Add(this.dgvKojData);
             this.Controls.Add(this.txtRyaku);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbKojCode);
             this.Name = "frmMain";
@@ -123,8 +103,6 @@ namespace CaveManBinding
 
         private System.Windows.Forms.ComboBox cbbKojCode;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtRyaku;
         private System.Windows.Forms.DataGridView dgvKojData;

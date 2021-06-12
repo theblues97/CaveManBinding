@@ -4,14 +4,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CaveManBinding.Models
 {
-    public partial class KojModel
+    public class KojUwModel
     {
         [Key]
+        [Column(Order = 0)]
+        [StringLength(10)]
+        public string KOJ { get; set; }
+
+        [Key]
+        [Column(Order = 1)]
         [StringLength(10)]
         public string CODE { get; set; }
-
-        [StringLength(10)]
-        public string SKOJ { get; set; }
 
         public int? KOJ_NENDO { get; set; }
 

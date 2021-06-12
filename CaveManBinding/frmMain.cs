@@ -17,7 +17,6 @@ namespace CaveManBinding
             vm = new frmMainVM();
             
             cbbKojCode.DataBindings.Add("Text", vm, "KojCode", true, DataSourceUpdateMode.OnPropertyChanged);
-            txtName.DataBindings.Add("Text", vm, "KojName");
             txtRyaku.DataBindings.Add("Text", vm, "KojRyaku");
 
             cbbKojCode.DataSource = vm.cbbKojCode;

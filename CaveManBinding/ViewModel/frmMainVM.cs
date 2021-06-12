@@ -15,7 +15,6 @@ namespace CaveManBinding.ViewModel
         private List<KojModel> _kojData;       
 
         private string _kojCode;
-        private string _kojName;
         private string _kojRyaku;
 
         #region Properties
@@ -27,15 +26,6 @@ namespace CaveManBinding.ViewModel
                 _kojCode = value;
                 KojCodeChanged();
                 //OnPropertyChanged("KojCode");
-            }
-        }
-        public string KojName
-        {
-            get { return _kojName; }
-            set
-            {
-                _kojName = value;
-                //OnPropertyChanged("KojCode"); 
             }
         }
         public string KojRyaku
@@ -68,7 +58,6 @@ namespace CaveManBinding.ViewModel
         public void KojCodeChanged()
         {
             var rs = _kojData.Where(k => k.CODE == _kojCode).FirstOrDefault();
-            _kojName = rs.NAME;
             _kojRyaku = rs.RYAKU;
         }     
 
