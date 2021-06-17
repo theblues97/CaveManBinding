@@ -10,7 +10,7 @@ using CaveManBinding.Models;
 
 namespace CaveManBinding.ViewModel
 {
-    class frmMainVM: INotifyPropertyChanged
+    class frmMainVM : INotifyPropertyChanged
     {
         private List<KojModel> _kojData;       
 
