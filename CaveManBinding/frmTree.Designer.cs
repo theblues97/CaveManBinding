@@ -63,14 +63,14 @@ namespace CaveManBinding
             this.dgvKoj.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKoj.Location = new System.Drawing.Point(303, 160);
             this.dgvKoj.Name = "dgvKoj";
-            this.dgvKoj.Size = new System.Drawing.Size(485, 265);
+            this.dgvKoj.Size = new System.Drawing.Size(651, 265);
             this.dgvKoj.TabIndex = 4;
             // 
             // frmTree
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 437);
+            this.ClientSize = new System.Drawing.Size(966, 437);
             this.Controls.Add(this.dgvKoj);
             this.Controls.Add(this.txtBmnRyaku);
             this.Controls.Add(this.txtBmnCode);

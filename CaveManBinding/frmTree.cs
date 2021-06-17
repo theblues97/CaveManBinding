@@ -24,6 +24,7 @@ namespace CaveManBinding
             vm = new frmTreeVM();
 
             tvwMenu.DataBindings.Add("SelectedNode", vm, "CurrentNode", true, DataSourceUpdateMode.OnPropertyChanged);
+            txtBmnCode.DataBindings.Add("Text", vm, "BmnCode");
             txtBmnRyaku.DataBindings.Add("Text", vm, "BmnRyaku");
             dgvKoj.DataBindings.Add(nameof(dgvKoj.DataSource), vm, nameof(vm.GrdKoj));
 
