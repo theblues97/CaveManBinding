@@ -22,23 +22,22 @@ namespace CaveManBinding
         private void frmTree_Load(object sender, EventArgs e)
         {
             vm = new frmTreeVM();
-            //txtBmnRyaku.DataBindings.Clear();
 
-            //txtBmnCode.DataBindings.Add(nameof(txtBmnCode.Text), vm, nameof(vm.BmnCode), true);
-            //txtBmnRyaku.DataBindings.Add("Text", vm, "BmnRyaku");
-            //dgvKoj.DataBindings.Add(nameof(dgvKoj.DataSource), vm, nameof(vm.GrdKoj));
+            tvwMenu.DataBindings.Add("SelectedNode", vm, "CurrentNode", true, DataSourceUpdateMode.OnPropertyChanged);
+            txtBmnRyaku.DataBindings.Add("Text", vm, "BmnRyaku");
+            dgvKoj.DataBindings.Add(nameof(dgvKoj.DataSource), vm, nameof(vm.GrdKoj));
 
             tvwMenu.Nodes.Add(vm.TreeData);
-            vm.CurrentNode = vm.TreeData.Name;
+            vm.CurrentNode = vm.TreeData;
         }
 
         private void tvwMenu_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            txtBmnRyaku.DataBindings.Clear();
-            dgvKoj.DataBindings.Clear();
-            txtBmnRyaku.DataBindings.Add("Text", vm, "BmnRyaku");
-            dgvKoj.DataBindings.Add(nameof(dgvKoj.DataSource), vm, nameof(vm.GrdKoj));
-            vm.CurrentNode = tvwMenu.SelectedNode.Name;
+            //txtBmnRyaku.DataBindings.Clear();
+            //dgvKoj.DataBindings.Clear();
+            //txtBmnRyaku.DataBindings.Add("Text", vm, "BmnRyaku");
+            //dgvKoj.DataBindings.Add(nameof(dgvKoj.DataSource), vm, nameof(vm.GrdKoj));
+            vm.CurrentNode = tvwMenu.SelectedNode;
             
         }
     }

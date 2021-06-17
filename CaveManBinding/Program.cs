@@ -13,8 +13,8 @@ namespace CaveManBinding
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
-            //Application.Run(new frmTree());
+            //Application.Run(new frmMain());
+            Application.Run(new frmTree());
         }
     }
 }

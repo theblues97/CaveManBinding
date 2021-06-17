@@ -15,7 +15,7 @@ namespace CaveManBinding.ViewModel
     {
         private List<BmnUwModel> _bmnData;    
         private TreeNode _treeData;
-        private string _curentNodeKey;
+        private TreeNode _curentNode;
         private List<KojModel> _kojData;
         private List<KojModel> _grdKoj;
         private string _bmnCode;
@@ -45,12 +45,12 @@ namespace CaveManBinding.ViewModel
             get { return _grdKoj; }
         }
 
-        public string CurrentNode
+        public TreeNode CurrentNode
         {
-            get { return _curentNodeKey; }
+            get { return _curentNode; }
             set 
             {
-                _curentNodeKey = value;
+                _curentNode = value;
                 
                 TreeNodeChanged();
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs("CurrentNode"));
@@ -99,11 +99,11 @@ namespace CaveManBinding.ViewModel
         private void TreeNodeChanged()
         {
             //get Bmn following selected node
-            var currentBmn = _bmnData.Where(b => b.CODE == _curentNodeKey).FirstOrDefault();     
+            var currentBmn = _bmnData.Where(b => b.CODE == _curentNode.Name).FirstOrDefault();     
 
             _bmnCode = currentBmn.CODE;
             _bmnRyaku = currentBmn.RYAKU;
-            _grdKoj = _kojData.Where(k => k.BMN_UW == _curentNodeKey).ToList();
+            _grdKoj = _kojData.Where(k => k.BMN_UW == _curentNode.Name).ToList();
         }
     }
 }
